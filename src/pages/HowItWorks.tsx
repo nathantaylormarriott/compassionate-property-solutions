@@ -150,9 +150,9 @@ export default function HowItWorks() {
               just an opportunity to explore your options with someone who truly
               listens.
             </p>
-            <Link to="/sell">
+            <Link to="/contact">
               <Button size="lg">
-                Begin with a Caring Conversation
+                Begin a Conversation
                 <ArrowRight className="ml-2" />
               </Button>
             </Link>

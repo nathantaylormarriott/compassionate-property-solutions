@@ -127,9 +127,9 @@ export default function FAQ() {
                   Contact us
                 </Button>
               </Link>
-              <Link to="/sell">
+              <Link to="/contact">
                 <Button size="lg">
-                  Begin with a Caring Conversation
+                  Begin a Conversation
                   <ArrowRight className="ml-2" />
                 </Button>
               </Link>
