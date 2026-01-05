@@ -19,9 +19,9 @@ const steps = [
   },
   {
     number: "02",
-    title: "Your Personalized Path",
+    title: "Your Personalised Path",
     description:
-      "We explain every option clearly—from a traditional sale to a simplified, guaranteed purchase—and help you choose what brings the most peace and meets your practical needs. You are always in control.",
+      "We explain every option clearly—from a traditional sale to a discreet, guided sale—and help you choose what brings the most peace and meets your practical needs. You are always in control.",
     icon: Compass,
     details: [
       "Clear explanation of all options",
@@ -32,12 +32,12 @@ const steps = [
   },
   {
     number: "03",
-    title: "Private Matching",
+    title: "Private Introductions",
     description:
-      "Using our network of vetted cash buyers, we identify those whose criteria match your property. We never share your details publicly or list on any portals. Your privacy is sacred.",
+      "Using our network of vetted buyers, we identify those whose criteria match your property. We never share your details publicly or list on any portals. Your privacy is sacred.",
     icon: CheckCircle2,
     details: [
-      "Match with suitable cash buyers",
+      "Match with suitable private buyers",
       "No public marketing or listings",
       "Your details remain confidential",
       "Only serious buyers are considered",
@@ -47,12 +47,12 @@ const steps = [
     number: "04",
     title: "We Carry the Burden",
     description:
-      "Once you decide to proceed, our dedicated team handles everything: from coordinating with solicitors and navigating paperwork to managing the home's condition. We are your single point of contact throughout.",
+      "Once you decide to proceed, our dedicated team handles everything: from coordinating with your solicitors or ours and navigating paperwork to managing the home's condition. We are your single point of contact throughout.",
     icon: HandHeart,
     details: [
-      "Coordinate with solicitors",
+      "Coordinate with your solicitors or ours",
       "Regular progress updates",
-      "Handle all the logistics",
+      "Handle all the details",
       "Guide you calmly to completion",
     ],
   },
@@ -143,10 +143,10 @@ export default function HowItWorks() {
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-serif text-primary mb-4">
-              Ready for a Lighter Burden?
+              Start Your Next Chapter
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Start with a compassionate conversation. There's no obligation,
+              Start with a confidential conversation. There's no obligation,
               just an opportunity to explore your options with someone who truly
               listens.
             </p>

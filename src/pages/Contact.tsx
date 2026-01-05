@@ -100,7 +100,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Email</h3>
                     <p className="text-muted-foreground">
-                      hello@gracefultransitions.co.uk
+                      hello@thenextchapterhomes.co.uk
                     </p>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export default function Contact() {
                     <h3 className="font-medium text-foreground mb-1">Phone</h3>
                     <p className="text-muted-foreground">0800 123 4567</p>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Mon-Fri, 9am-6pm
+                      Mon–Fri, 9am–6pm
                     </p>
                   </div>
                 </div>
