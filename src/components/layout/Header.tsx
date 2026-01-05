@@ -6,7 +6,6 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/sell", label: "Sell a Property" },
-  { href: "/buyers", label: "Cash Buyers" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
@@ -17,12 +16,12 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-card/70 backdrop-blur-xl border border-white/20 shadow-lg">
       <div className="container">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <span className="font-serif text-xl md:text-2xl font-semibold text-primary">
-              Graceful Transitions
+            <span className="font-serif text-xl md:text-2xl font-bold text-primary">
+              The Next Chapter Homes
             </span>
           </Link>
 

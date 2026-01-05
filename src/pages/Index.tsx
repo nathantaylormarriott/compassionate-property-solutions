@@ -17,15 +17,15 @@ const processSteps = [
   },
   {
     icon: Compass,
-    title: "Your Personalized Path",
+    title: "Your Personalised Path",
     description:
-      "We explain every option clearly—from a traditional sale to a simplified, guaranteed purchase—and help you choose what brings the most peace.",
+      "We explain every option clearly—from a traditional sale to a discreet, guided sale—and help you choose what brings the most peace.",
   },
   {
     icon: HandHeart,
     title: "We Carry the Burden",
     description:
-      "Once you decide, our dedicated team handles everything: from coordinating with solicitors and navigating paperwork to managing the home's condition.",
+      "Once you decide, our dedicated team handles everything: from coordinating with your solicitors or ours and navigating paperwork to managing the home's condition.",
   },
 ];
 
@@ -36,14 +36,24 @@ const faqPreview = [
       "Absolutely. This consultation is simply to provide information and answer questions. We will never pressure you. You decide when, or if, you're ready to take the next step.",
   },
   {
-    question: "How do you handle families who may disagree on the sale?",
+    question: "I'm worried about accepting an undervalued offer. How do you protect me?",
     answer:
-      "With sensitivity and neutrality. We facilitate clear communication between all parties, providing objective information to help find common ground and reduce conflict.",
+      "We share clear market context, explain each offer transparently, and support you in making the decision that feels right without pressure.",
   },
   {
     question: "The house needs repairs and clearing out. Can you help with that?",
     answer:
-      "Yes. We can coordinate every detail, from minor repairs to full clearouts, working with vetted, respectful partners. You don't have to lift a finger.",
+      "Yes. We can arrange for the buyer to handle repairs and clear-outs, so you don't need to manage works or organise contractors.",
+  },
+  {
+    question: "The process sounds complicated. Will you simplify it for me?",
+    answer:
+      "Yes. We break everything down into calm, manageable steps and take care of the paperwork, so you always know what's happening.",
+  },
+  {
+    question: "How quickly can things move if I need a faster timeline?",
+    answer:
+      "In most instances, we can complete within 7–28 days, depending on your circumstances and the property.",
   },
 ];
 
@@ -96,15 +106,16 @@ export default function Index() {
         <div className="container relative z-10 py-20">
           <div className="max-w-2xl animate-fade-in-up">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-primary-foreground leading-tight mb-6">
-              Facing the Sale of a Home After Loss or Divorce?
+              Selling a property during a life transition doesn’t have to be stressful.
             </h1>
             <p className="text-2xl md:text-3xl font-serif text-primary-foreground/90 leading-snug mb-6">
               You Don't Have to Navigate This Alone.
             </p>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8 max-w-xl">
-              We provide compassionate, step-by-step guidance to handle the
-              practical burdens of selling a home, so you can focus on what
-              matters most: healing, family, and moving forward.
+              When life brings transitions through loss, divorce, or change,
+              selling a home can feel overwhelming. We guide you through with
+              compassion, handling the practical burdens so you can focus on
+              healing and moving forward.
             </p>
 
             <div className="mb-4">
@@ -141,7 +152,7 @@ export default function Index() {
                 </p>
                 <p className="text-foreground leading-relaxed">
                   Our role isn't to be just another company. We are specialists
-                  who provide a calm, clear path forward—handling the logistics
+                  who provide a calm, clear path forward—handling the details
                   with care and respect, so you don't have to.
                 </p>
               </div>
@@ -260,12 +271,12 @@ export default function Index() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-serif text-primary-foreground mb-4">
-                Ready for a Lighter Burden?
+                Start Your Next Chapter
               </h2>
               <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
-                Let's have a brief, confidential conversation. We can outline
-                your options and answer your specific questions. There is no
-                cost, no obligation—just clarity.
+                Let's have a confidential conversation. We can outline your
+                options and answer your specific questions. There is no cost,
+                no obligation, just clarity.
               </p>
             </div>
 
