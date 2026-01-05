@@ -3,10 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
+const keysLogo = "/src/assets/keys logo.svg";
+
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/sell", label: "Sell a Property" },
-  { href: "/buyers", label: "Cash Buyers" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
@@ -17,12 +17,18 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-card/70 backdrop-blur-xl border border-white/20 shadow-lg">
       <div className="container">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <span className="font-serif text-xl md:text-2xl font-semibold text-primary">
-              Graceful Transitions
+            <img
+              src={keysLogo}
+              alt=""
+              className="h-8 w-8 rounded-full object-contain"
+              aria-hidden="true"
+            />
+            <span className="font-serif text-xl md:text-2xl font-bold text-primary">
+              The Next Chapter Homes
             </span>
           </Link>
 
@@ -46,8 +52,8 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <Link to="/sell">
-              <Button size="sm">Start a Conversation</Button>
+            <Link to="/contact">
+              <Button size="sm">Begin a Conversation</Button>
             </Link>
           </div>
 
@@ -83,8 +89,8 @@ export function Header() {
                   </Button>
                 </Link>
               ))}
-              <Link to="/sell" onClick={() => setIsOpen(false)}>
-                <Button className="w-full mt-2">Start a Conversation</Button>
+              <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <Button className="w-full mt-2">Begin a Conversation</Button>
               </Link>
             </div>
           </nav>

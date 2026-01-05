@@ -16,24 +16,29 @@ const faqs = [
       "Absolutely. This consultation is simply to provide information and answer questions. We will never pressure you. You decide when, or if, you're ready to take the next step.",
   },
   {
-    question: "How do you handle families who may disagree on the sale?",
+    question: "I'm worried about accepting an undervalued offer. How do you protect me?",
     answer:
-      "With sensitivity and neutrality. We facilitate clear communication between all parties, providing objective information to help find common ground and reduce conflict. Our role is to support, not to complicate.",
+      "We share clear market context, explain each offer in plain terms, and help you weigh what matters most. You stay in control at every stage.",
   },
   {
     question: "The house needs repairs and clearing out. Can you help with that?",
     answer:
-      "Yes. We can coordinate every detail, from minor repairs to full clearouts, working with vetted, respectful partners. You don't have to lift a finger if you don't want to.",
+      "Yes. We can arrange for the buyer to handle repairs and clear-outs, so you don't need to manage works or organise contractors.",
+  },
+  {
+    question: "The process feels complicated. Will you simplify it for me?",
+    answer:
+      "Yes. We break everything down into calm, manageable steps and handle the paperwork, so you always know what's happening.",
   },
   {
     question: "What does 'off-market' mean?",
     answer:
-      "Off-market means your property is never listed on property portals like Rightmove or Zoopla, and there's no 'For Sale' board. We introduce your property directly to vetted buyers through our private network, ensuring complete discretion.",
+      "Off-market means your property is never listed on portals like Rightmove or Zoopla, and there's no 'For Sale' board. We introduce your property directly to vetted buyers through our private network, ensuring complete discretion.",
   },
   {
     question: "How is this different from a traditional estate agent?",
     answer:
-      "Traditional agents market properties publicly and often to anyone who enquires. We work exclusively with verified cash buyers and make confidential introductions only. There are no open viewings, no public listings, and minimal disruption to your life during an already difficult time.",
+      "Traditional agents market properties publicly and often to anyone who enquires. We make confidential introductions to vetted private buyers only. There are no open viewings, no public listings, and minimal disruption to your life during an already difficult time.",
   },
   {
     question: "What fees do you charge?",
@@ -43,7 +48,7 @@ const faqs = [
   {
     question: "How long does the process take?",
     answer:
-      "Because we work with cash buyers, completions can happen much faster than traditional sales — typically 4-8 weeks from accepting an offer. However, we work to your timeline and can accommodate longer timeframes if you need more time. There is no rush.",
+      "Completions can happen much faster than traditional sales — often 7–28 days in most instances. However, we work to your timeline and can accommodate longer timeframes if you need more time. There is no rush.",
   },
   {
     question: "Do I have to proceed if I make an enquiry?",
@@ -51,19 +56,14 @@ const faqs = [
       "Absolutely not. An initial conversation is completely without obligation. We understand you may be exploring options, and we're here to help you understand what's possible without any pressure. You decide when, or if, you're ready.",
   },
   {
-    question: "How do you vet your cash buyers?",
+    question: "How do you vet potential buyers?",
     answer:
-      "All buyers in our network provide verified proof of funds before we make any introductions. We only work with serious buyers who can demonstrate their ability to complete purchases quickly and without complications.",
+      "All buyers in our network provide verified proof of funds before we make any introductions. We only work with serious buyers who can demonstrate their ability to complete without complications.",
   },
   {
-    question: "Can you help with properties that need work?",
+    question: "I'm a solicitor or professional adviser. Can we work together?",
     answer:
-      "Yes. Many of our cash buyers actively seek properties that need refurbishment. This can be particularly helpful if you're dealing with a property that's been empty or needs significant work.",
-  },
-  {
-    question: "I'm a solicitor or professional advisor. Can we work together?",
-    answer:
-      "We welcome referrals from solicitors, financial advisors, and other professionals who have clients needing discreet property sales. Please contact us to discuss how we can support your clients with the same care and sensitivity.",
+      "We welcome referrals from solicitors, financial advisers, and other professionals who have clients needing discreet property sales. Please contact us to discuss how we can support your clients with the same care and sensitivity.",
   },
 ];
 
@@ -127,9 +127,9 @@ export default function FAQ() {
                   Contact us
                 </Button>
               </Link>
-              <Link to="/sell">
+              <Link to="/contact">
                 <Button size="lg">
-                  Begin with a Caring Conversation
+                  Begin a Conversation
                   <ArrowRight className="ml-2" />
                 </Button>
               </Link>
