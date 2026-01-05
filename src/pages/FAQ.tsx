@@ -11,29 +11,44 @@ import { ArrowRight } from "lucide-react";
 
 const faqs = [
   {
+    question: "I'm not ready to make any decisions. Is that okay?",
+    answer:
+      "Absolutely. This consultation is simply to provide information and answer questions. We will never pressure you. You decide when, or if, you're ready to take the next step.",
+  },
+  {
+    question: "How do you handle families who may disagree on the sale?",
+    answer:
+      "With sensitivity and neutrality. We facilitate clear communication between all parties, providing objective information to help find common ground and reduce conflict. Our role is to support, not to complicate.",
+  },
+  {
+    question: "The house needs repairs and clearing out. Can you help with that?",
+    answer:
+      "Yes. We can coordinate every detail, from minor repairs to full clearouts, working with vetted, respectful partners. You don't have to lift a finger if you don't want to.",
+  },
+  {
     question: "What does 'off-market' mean?",
     answer:
-      "Off-market means your property is never listed on property portals like Rightmove or Zoopla, and there's no 'For Sale' board. We introduce your property directly to vetted cash buyers through our private network, ensuring complete discretion.",
+      "Off-market means your property is never listed on property portals like Rightmove or Zoopla, and there's no 'For Sale' board. We introduce your property directly to vetted buyers through our private network, ensuring complete discretion.",
   },
   {
     question: "How is this different from a traditional estate agent?",
     answer:
-      "Traditional agents market properties publicly and often to anyone who enquires. We work exclusively with verified cash buyers and make confidential introductions only. There are no open viewings, no public listings, and minimal disruption to your life.",
+      "Traditional agents market properties publicly and often to anyone who enquires. We work exclusively with verified cash buyers and make confidential introductions only. There are no open viewings, no public listings, and minimal disruption to your life during an already difficult time.",
   },
   {
     question: "What fees do you charge?",
     answer:
-      "We discuss fees openly during our initial conversation, as they depend on your specific circumstances. There are no upfront costs, and you're under no obligation until you decide to proceed.",
+      "We discuss fees openly during our initial conversation, as they depend on your specific circumstances. There are no upfront costs, and you're under no obligation until you decide to proceed. Transparency is important to us.",
   },
   {
     question: "How long does the process take?",
     answer:
-      "Because we work with cash buyers, completions can happen much faster than traditional sales — typically 4-8 weeks from accepting an offer. However, we work to your timeline and can accommodate longer timeframes if needed.",
+      "Because we work with cash buyers, completions can happen much faster than traditional sales — typically 4-8 weeks from accepting an offer. However, we work to your timeline and can accommodate longer timeframes if you need more time. There is no rush.",
   },
   {
     question: "Do I have to proceed if I make an enquiry?",
     answer:
-      "Absolutely not. An initial conversation is completely without obligation. We understand you may be exploring options, and we're here to help you understand what's possible without any pressure.",
+      "Absolutely not. An initial conversation is completely without obligation. We understand you may be exploring options, and we're here to help you understand what's possible without any pressure. You decide when, or if, you're ready.",
   },
   {
     question: "How do you vet your cash buyers?",
@@ -46,14 +61,9 @@ const faqs = [
       "Yes. Many of our cash buyers actively seek properties that need refurbishment. This can be particularly helpful if you're dealing with a property that's been empty or needs significant work.",
   },
   {
-    question: "What areas do you cover?",
-    answer:
-      "We work across England and Wales, with particularly strong networks in London, the South East, and major cities. Please get in touch to discuss your specific location.",
-  },
-  {
     question: "I'm a solicitor or professional advisor. Can we work together?",
     answer:
-      "We welcome referrals from solicitors, financial advisors, and other professionals who have clients needing discreet property sales. Please contact us to discuss how we can support your clients.",
+      "We welcome referrals from solicitors, financial advisors, and other professionals who have clients needing discreet property sales. Please contact us to discuss how we can support your clients with the same care and sensitivity.",
   },
 ];
 
@@ -65,11 +75,12 @@ export default function FAQ() {
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-foreground mb-6 animate-fade-in-up">
-              Frequently asked questions
+              Common Concerns, Gentle Guidance
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl">
-              Find answers to common questions about our service. If you can't
-              find what you're looking for, please don't hesitate to get in touch.
+              Your questions, answered with compassion. If you can't find what
+              you're looking for, please don't hesitate to get in touch—we're
+              here to listen.
             </p>
           </div>
         </div>
@@ -107,8 +118,8 @@ export default function FAQ() {
               Still have questions?
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              We're happy to answer any questions you may have. Get in touch
-              for a confidential conversation.
+              We're happy to answer any questions you may have. There's no
+              pressure, no obligation—just a compassionate conversation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
@@ -118,7 +129,7 @@ export default function FAQ() {
               </Link>
               <Link to="/sell">
                 <Button size="lg">
-                  Start a conversation
+                  Begin with a Caring Conversation
                   <ArrowRight className="ml-2" />
                 </Button>
               </Link>

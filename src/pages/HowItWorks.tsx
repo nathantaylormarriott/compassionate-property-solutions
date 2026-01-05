@@ -1,28 +1,41 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Users, Handshake, CheckCircle2, ArrowRight } from "lucide-react";
+import { Ear, Compass, HandHeart, CheckCircle2, ArrowRight } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    title: "Confidential conversation",
+    title: "A Listening Ear First",
     description:
-      "We start with a private, no-obligation conversation to understand your situation. Whether you're dealing with bereavement, divorce, or another life change, we listen first and explain your options clearly.",
-    icon: MessageCircle,
+      "We start with a private, no-obligation conversation to truly understand your unique situation, timeline, and needs. Whether you're dealing with bereavement, divorce, or another life change, we listen first. There is no rush, no script. This is your journey.",
+    icon: Ear,
     details: [
       "No pressure, no obligation",
       "Understand your timeline and needs",
       "Explain how our process works",
-      "Answer all your questions",
+      "Answer all your questions with patience",
     ],
   },
   {
     number: "02",
-    title: "Private matching",
+    title: "Your Personalized Path",
     description:
-      "Using our network of vetted cash buyers, we identify those whose criteria match your property. We never share your details publicly or list on any portals.",
-    icon: Users,
+      "We explain every option clearly—from a traditional sale to a simplified, guaranteed purchase—and help you choose what brings the most peace and meets your practical needs. You are always in control.",
+    icon: Compass,
+    details: [
+      "Clear explanation of all options",
+      "No confusing jargon or pressure",
+      "Help you choose what's right for you",
+      "Respect your decision, whatever it is",
+    ],
+  },
+  {
+    number: "03",
+    title: "Private Matching",
+    description:
+      "Using our network of vetted cash buyers, we identify those whose criteria match your property. We never share your details publicly or list on any portals. Your privacy is sacred.",
+    icon: CheckCircle2,
     details: [
       "Match with suitable cash buyers",
       "No public marketing or listings",
@@ -31,29 +44,16 @@ const steps = [
     ],
   },
   {
-    number: "03",
-    title: "Introductions",
-    description:
-      "We facilitate confidential introductions between you and interested buyers. We're there to support discussions and ensure both parties are comfortable.",
-    icon: Handshake,
-    details: [
-      "Managed introductions only",
-      "Support during negotiations",
-      "Keep both parties informed",
-      "Handle any concerns sensitively",
-    ],
-  },
-  {
     number: "04",
-    title: "Progression support",
+    title: "We Carry the Burden",
     description:
-      "Once terms are agreed, we help maintain momentum through to completion. We work with solicitors and all parties to ensure a smooth process.",
-    icon: CheckCircle2,
+      "Once you decide to proceed, our dedicated team handles everything: from coordinating with solicitors and navigating paperwork to managing the home's condition. We are your single point of contact throughout.",
+    icon: HandHeart,
     details: [
       "Coordinate with solicitors",
       "Regular progress updates",
-      "Problem-solving support",
-      "Guide you to completion",
+      "Handle all the logistics",
+      "Guide you calmly to completion",
     ],
   },
 ];
@@ -66,12 +66,12 @@ export default function HowItWorks() {
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-foreground mb-6 animate-fade-in-up">
-              How it works
+              Built on Patience, Clarity, and Respect
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl">
-              A calm, structured process designed to take the stress out of
-              selling during a difficult time. We guide you through each step
-              with care and professionalism.
+              A calm, structured process designed to take the burdens off your
+              shoulders during a difficult time. We guide you through each step
+              with care, never rushing, always listening.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function HowItWorks() {
                         {step.number}
                       </span>
                       <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                        <step.icon className="w-5 h-5 text-accent" />
+                        <step.icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
                       </div>
                       <h2 className="text-2xl font-serif text-primary">
                         {step.title}
@@ -120,7 +120,10 @@ export default function HowItWorks() {
                       </h4>
                       <ul className="grid md:grid-cols-2 gap-3">
                         {step.details.map((detail) => (
-                          <li key={detail} className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <li
+                            key={detail}
+                            className="flex items-center gap-2 text-sm text-muted-foreground"
+                          >
                             <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
                             {detail}
                           </li>
@@ -140,15 +143,16 @@ export default function HowItWorks() {
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-serif text-primary mb-4">
-              Ready to take the first step?
+              Ready for a Lighter Burden?
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Start with a confidential conversation. There's no obligation,
-              just an opportunity to explore your options.
+              Start with a compassionate conversation. There's no obligation,
+              just an opportunity to explore your options with someone who truly
+              listens.
             </p>
             <Link to="/sell">
               <Button size="lg">
-                Request a confidential conversation
+                Begin with a Caring Conversation
                 <ArrowRight className="ml-2" />
               </Button>
             </Link>
