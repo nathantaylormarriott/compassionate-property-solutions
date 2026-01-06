@@ -64,7 +64,7 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary py-16 md:py-24">
+      <section className="bg-primary py-16 md:py-24 -mt-20 pt-28 md:pt-32">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-foreground mb-6 animate-fade-in-up">
@@ -134,7 +134,7 @@ export default function Contact() {
             {/* Form */}
             <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
               <h3 className="text-xl font-serif text-primary mb-6">
-                Send us a message
+                Start your next chapter
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -207,7 +207,7 @@ export default function Contact() {
                   className="w-full"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send message"}
+                  {isSubmitting ? "Sending..." : "Begin a Conversation"}
                   {!isSubmitting && <ArrowRight className="ml-2" />}
                 </Button>
 

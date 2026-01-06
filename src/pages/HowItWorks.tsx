@@ -59,7 +59,7 @@ export default function HowItWorks() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary py-16 md:py-24">
+      <section className="bg-primary py-16 md:py-24 -mt-20 pt-28 md:pt-32">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-foreground mb-6 animate-fade-in-up">
@@ -146,7 +146,7 @@ export default function HowItWorks() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary-foreground mb-4">
               For Those Needing a Swift Sale
             </h2>
-            <p className="text-xl md:text-2xl font-serif text-primary-foreground/90 mb-8">
+            <p className="text-xl md:text-2xl font-serif font-medium text-primary-foreground/90 mb-8">
               A Direct Path to Completion, Not Just a Viewing
             </p>
 
@@ -158,7 +158,7 @@ export default function HowItWorks() {
               When time is of the essence—whether due to probate deadlines, divorce settlements, or simply the need for closure—the traditional property market moves too slowly. Public viewings, buyer financing delays, and lengthy chains can add months of uncertainty.
             </p>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/20">
+            <div className="bg-white/10 rounded-xl p-6 md:p-8 border border-white/20">
               <h3 className="text-xl font-serif text-primary-foreground mb-4">
                 Our Realistic Timeline:
               </h3>

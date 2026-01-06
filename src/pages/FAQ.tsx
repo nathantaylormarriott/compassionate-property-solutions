@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "How long does the process take?",
     answer:
-      "Completions can happen much faster than traditional sales — often 7–28 days in most instances. However, we work to your timeline and can accommodate longer timeframes if you need more time. There is no rush.",
+      "Completions can happen much faster than traditional sales — often 7 days to 8 weeks in most instances. However, we work to your timeline and can accommodate longer timeframes if you need more time. There is no rush.",
   },
   {
     question: "Do I have to proceed if I make an enquiry?",
@@ -60,22 +60,17 @@ const faqs = [
     answer:
       "All buyers in our network provide verified proof of funds before we make any introductions. We only work with serious buyers who can demonstrate their ability to complete without complications.",
   },
-  {
-    question: "I'm a solicitor or professional adviser. Can we work together?",
-    answer:
-      "We welcome referrals from solicitors, financial advisers, and other professionals who have clients needing discreet property sales. Please contact us to discuss how we can support your clients with the same care and sensitivity.",
-  },
 ];
 
 export default function FAQ() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary py-16 md:py-24">
+      <section className="bg-primary py-16 md:py-24 -mt-20 pt-28 md:pt-32">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-foreground mb-6 animate-fade-in-up">
-              Common Concerns, Gentle Guidance
+              Common Concerns
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl">
               Your questions, answered with compassion. If you can't find what
@@ -121,19 +116,12 @@ export default function FAQ() {
               We're happy to answer any questions you may have. There's no
               pressure, no obligation—just a compassionate conversation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button variant="outline" size="lg">
-                  Contact us
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg">
-                  Begin a Conversation
-                  <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-            </div>
+            <Link to="/contact">
+              <Button size="lg">
+                Begin a Conversation
+                <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
