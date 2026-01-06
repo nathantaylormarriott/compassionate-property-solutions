@@ -8,9 +8,13 @@ import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { Ear, Compass, HandHeart, ArrowRight, ChevronRight } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
-
-const propertyStaircase = "/src/assets/This Is More Than Just a Property Sale tile.jpg";
-const patienceBackground = "/src/assets/section background.jpg";
+import propertyStaircase from "@/assets/This Is More Than Just a Property Sale tile.jpg";
+import patienceBackground from "@/assets/section background.jpg";
+import guidanceSupportImage from "@/assets/faq-guidance-handshake.png";
+import guidanceFocusImage from "@/assets/faq-guidance-reflection.png";
+import guidanceValueImage from "@/assets/faq-guidance-paperwork.png";
+import guidanceHomeImage from "@/assets/faq-guidance-home.png";
+import guidanceSupportToolsImage from "@/assets/faq-guidance-cleaning.png";
 
 const processSteps = [
   {
@@ -38,26 +42,36 @@ const faqPreview = [
     question: "I'm not ready to make any decisions. Is that okay?",
     answer:
       "Absolutely. This consultation is simply to provide information and answer questions. We will never pressure you. You decide when, or if, you're ready to take the next step.",
+    image: guidanceFocusImage,
+    imageAlt: "Quiet moment with a warm cup by the window",
   },
   {
     question: "I'm worried about accepting an undervalued offer. How do you protect me?",
     answer:
       "We share clear market context, explain each offer transparently, and support you in making the decision that feels right without pressure.",
+    image: guidanceValueImage,
+    imageAlt: "Reviewing a property document with care",
   },
   {
     question: "The house needs repairs and clearing out. Can you help with that?",
     answer:
       "Yes. We can arrange for the buyer to handle repairs and clear-outs, so you don't need to manage works or organise contractors.",
+    image: guidanceSupportToolsImage,
+    imageAlt: "Cleaning supplies ready to help with a clear-out",
   },
   {
     question: "The process sounds complicated. Will you simplify it for me?",
     answer:
       "Yes. We break everything down into calm, manageable steps and take care of the paperwork, so you always know what's happening.",
+    image: guidanceHomeImage,
+    imageAlt: "Calm, airy living room ready for a fresh start",
   },
   {
     question: "How quickly can things move if I need a faster timeline?",
     answer:
       "In most instances, we can complete within 7–28 days, depending on your circumstances and the property.",
+    image: guidanceSupportImage,
+    imageAlt: "Supportive handshake offering reassurance",
   },
 ];
 
@@ -247,18 +261,30 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-6 mb-12">
+          <div className="max-w-5xl mx-auto space-y-6 mb-12">
             {faqPreview.map((faq, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl p-6 shadow-soft border border-border"
+                className={`bg-card rounded-2xl p-6 md:p-8 shadow-soft border border-border flex flex-col md:flex-row items-center gap-6 md:gap-10 ${
+                  index % 2 === 1 ? "md:flex-row-reverse" : ""
+                }`}
               >
-                <h3 className="font-serif text-lg text-primary mb-3">
-                  "{faq.question}"
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {faq.answer}
-                </p>
+                <div className="w-full md:w-2/5 flex justify-center">
+                  <img
+                    src={faq.image}
+                    alt={faq.imageAlt}
+                    className="w-full max-w-[280px] aspect-square rounded-2xl object-cover shadow-card"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="w-full md:w-3/5">
+                  <h3 className="font-serif text-lg md:text-xl text-primary mb-3">
+                    "{faq.question}"
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -266,7 +292,7 @@ export default function Index() {
           <div className="text-center">
             <Link to="/faq">
               <Button variant="outline" size="lg">
-                Read More Gentle Guidance
+                Read More Guidance
                 <ChevronRight className="ml-1" />
               </Button>
             </Link>
@@ -412,7 +438,7 @@ export default function Index() {
                     className="w-full"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Request a Compassionate Callback"}
+                    {isSubmitting ? "Sending..." : "Request a Callback"}
                   </Button>
                 </form>
                 <p className="text-center text-xs text-muted-foreground mt-4">

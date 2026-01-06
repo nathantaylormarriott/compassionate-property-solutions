@@ -73,6 +73,7 @@ export function Footer() {
             <p className="text-slate-300/70 text-sm">
               © {new Date().getFullYear()} The Next Chapter Homes. All rights reserved.
             </p>
+            <p className="text-slate-300/70 text-sm">Marketing by AURORA Media</p>
             <div className="flex gap-6 text-sm">
               <Link
                 to="/privacy"
