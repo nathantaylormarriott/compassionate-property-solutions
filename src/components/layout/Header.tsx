@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/faq", label: "FAQ" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -17,7 +18,7 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-card/70 backdrop-blur-xl border border-white/20 shadow-lg">
+    <header className="sticky top-0 z-50 bg-card shadow-lg">
       <div className="container">
         <div className="flex items-center h-16 md:h-20">
           {/* Logo - left */}
