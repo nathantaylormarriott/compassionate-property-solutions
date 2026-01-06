@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowRight } from "lucide-react";
+import faqBackground from "@/assets/faq-background.webp";
 
 const faqs = [
   {
@@ -82,8 +83,13 @@ export default function FAQ() {
       </section>
 
       {/* FAQ List */}
-      <section className="py-16 md:py-24">
-        <div className="container">
+      <section className="relative py-16 md:py-24 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-[0.12]"
+          style={{ backgroundImage: `url(${faqBackground})` }}
+          aria-hidden="true"
+        />
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (

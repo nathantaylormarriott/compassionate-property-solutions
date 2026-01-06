@@ -27,13 +27,13 @@ const processSteps = [
     icon: Compass,
     title: "Your Personalised Path",
     description:
-      "We explain every option clearly—from a traditional sale to a discreet, guided sale—and help you choose what brings the most peace.",
+      "We explain every option clearly from a traditional sale to a discreet, guided sale and provide clarity where you need it most.",
   },
   {
     icon: HandHeart,
     title: "We Carry the Burden",
     description:
-      "Once you decide, our dedicated team handles everything: from coordinating with your solicitors or ours and navigating paperwork to managing the home's condition.",
+      "Once you decide, we take care of the process around the sale, helping navigate paperwork, and ensuring you're supported and informed at every stage.",
   },
 ];
 
@@ -399,7 +399,7 @@ export default function Index() {
                         name="timeframe"
                         value={formData.timeframe}
                         onChange={handleChange}
-                        placeholder="e.g. No rush, or within 3 months"
+                        placeholder="e.g. No rush, or as soon as possible"
                       />
                     </div>
                   </div>
@@ -438,7 +438,7 @@ export default function Index() {
                     className="w-full"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Request a Compassionate Callback"}
+                    {isSubmitting ? "Sending..." : "Begin a Conversation"}
                   </Button>
                 </form>
                 <p className="text-center text-xs text-muted-foreground mt-4">
