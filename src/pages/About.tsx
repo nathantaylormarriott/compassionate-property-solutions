@@ -69,7 +69,7 @@ const comparisonData = [
   },
   {
     category: "Certainty",
-    us: "High. Cash sale, no chain, and guaranteed completion once agreed.",
+    us: "Higher than a traditional sale. A cash-based process with no chain, helping minimise uncertainty and delay.",
     agents:
       "Low. Risk of buyer's mortgage falling through or a chain collapsing.",
   },
@@ -104,34 +104,38 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Purpose */}
+      {/* Our Purpose with Image */}
       <section className="py-16 md:py-24">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6">
-              Our Purpose
-            </h2>
-            <p className="text-muted-foreground leading-relaxed text-lg">
-              When facing a bereavement or divorce, you don't need a lengthy,
-              public property sale. We offer a private, compassionate
-              alternative. We connect homeowners in transition with prepared
-              cash buyers. Our process avoids public viewings and market
-              uncertainty, offering a respectful path to closure.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="text-center lg:text-left">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-6">
+                Our Purpose
+              </h2>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                When facing a bereavement or divorce, you don't need a lengthy,
+                public property sale. We offer a private, compassionate
+                alternative. We connect homeowners in transition with prepared
+                cash buyers. Our process avoids public viewings and market
+                uncertainty, offering a respectful path to closure.
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img
+                src={residentialDistrict}
+                alt="Residential neighbourhood"
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Founder's Vision with background image */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-[0.08]"
-          style={{ backgroundImage: `url(${residentialDistrict})` }}
-          aria-hidden="true"
-        />
-        <div className="container relative z-10">
+      {/* Founder's Vision */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-6">
               Our Founder's Vision
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
@@ -152,7 +156,7 @@ export default function About() {
       </section>
 
       {/* Process Steps */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {processSteps.map((step, index) => (
@@ -163,7 +167,7 @@ export default function About() {
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                   <step.icon className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-serif text-lg text-primary mb-3">
+                <h3 className="font-serif text-xl text-primary mb-3">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -176,10 +180,10 @@ export default function About() {
       </section>
 
       {/* Our Commitment */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-6">
               Our Commitment
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -187,7 +191,7 @@ export default function About() {
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-card border border-border rounded-xl p-6 shadow-soft">
-                <h3 className="font-serif text-lg text-primary mb-2">
+                <h3 className="font-serif text-xl text-primary mb-2">
                   Compassionate Efficiency
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -195,7 +199,7 @@ export default function About() {
                 </p>
               </div>
               <div className="bg-card border border-border rounded-xl p-6 shadow-soft">
-                <h3 className="font-serif text-lg text-primary mb-2">
+                <h3 className="font-serif text-xl text-primary mb-2">
                   Utmost Honesty
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -209,10 +213,10 @@ export default function About() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-serif text-primary mb-8 text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-8 text-center">
               How We Compare
             </h2>
             <p className="text-muted-foreground text-center mb-8">
@@ -222,13 +226,13 @@ export default function About() {
               <Table>
                 <TableHeader>
                   <TableRow className="bg-primary/5">
-                    <TableHead className="font-serif text-primary w-1/4">
+                    <TableHead className="font-serif text-primary text-lg w-1/4 border-r border-border">
                       Criteria
                     </TableHead>
-                    <TableHead className="font-serif text-accent w-[37.5%]">
+                    <TableHead className="font-serif text-accent text-lg w-[37.5%] border-r border-border">
                       The Next Chapter Homes
                     </TableHead>
-                    <TableHead className="font-serif text-muted-foreground w-[37.5%]">
+                    <TableHead className="font-serif text-muted-foreground text-lg w-[37.5%]">
                       Estate Agents
                     </TableHead>
                   </TableRow>
@@ -239,16 +243,13 @@ export default function About() {
                       key={index}
                       className={index % 2 === 0 ? "bg-background" : "bg-muted/20"}
                     >
-                      <TableCell className="font-medium text-foreground">
+                      <TableCell className="font-medium text-foreground border-r border-border">
                         {row.category}
                       </TableCell>
-                      <TableCell className="text-foreground">
-                        <span className="font-medium text-accent">
-                          {row.us.split(".")[0]}.
-                        </span>
-                        {row.us.includes(".") && row.us.split(".").slice(1).join(".")}
+                      <TableCell className="text-foreground border-r border-border">
+                        {row.us}
                       </TableCell>
-                      <TableCell className="text-muted-foreground">
+                      <TableCell className="text-foreground">
                         {row.agents}
                       </TableCell>
                     </TableRow>
