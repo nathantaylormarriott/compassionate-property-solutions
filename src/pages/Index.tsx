@@ -8,9 +8,8 @@ import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { Ear, Compass, HandHeart, ArrowRight, ChevronRight } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
-
-const propertyStaircase = "/src/assets/This Is More Than Just a Property Sale tile.jpg";
-const patienceBackground = "/src/assets/section background.jpg";
+import propertyStaircase from "@/assets/This Is More Than Just a Property Sale tile.jpg";
+import patienceBackground from "@/assets/section background.jpg";
 
 const processSteps = [
   {
