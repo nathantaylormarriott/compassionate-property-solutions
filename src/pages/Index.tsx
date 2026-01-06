@@ -125,7 +125,7 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative h-screen flex items-center -mt-20">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -133,7 +133,7 @@ export default function Index() {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
         </div>
 
-        <div className="container relative z-10 py-20">
+        <div className="container relative z-10 pt-20">
           <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-primary-foreground leading-tight mb-6">
               Selling a property during a life transition doesn’t have to be stressful.
