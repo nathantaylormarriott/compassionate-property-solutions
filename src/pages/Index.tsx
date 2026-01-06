@@ -10,6 +10,11 @@ import { Ear, Compass, HandHeart, ArrowRight, ChevronRight } from "lucide-react"
 import heroImage from "@/assets/hero-home.jpg";
 import propertyStaircase from "@/assets/This Is More Than Just a Property Sale tile.jpg";
 import patienceBackground from "@/assets/section background.jpg";
+import faqNotReady from "@/assets/faq-not-ready.webp";
+import faqUndervalued from "@/assets/faq-undervalued.webp";
+import faqRepairs from "@/assets/faq-repairs.webp";
+import faqComplicated from "@/assets/faq-complicated.webp";
+import faqTimeline from "@/assets/faq-timeline.webp";
 
 const processSteps = [
   {
@@ -37,26 +42,31 @@ const faqPreview = [
     question: "I'm not ready to make any decisions. Is that okay?",
     answer:
       "Absolutely. This consultation is simply to provide information and answer questions. We will never pressure you. You decide when, or if, you're ready to take the next step.",
+    image: faqNotReady,
   },
   {
     question: "I'm worried about accepting an undervalued offer. How do you protect me?",
     answer:
-      "We believe in clarity from the outset. Our offers are typically around 80% of current market value, reflecting the certainty, speed, and simplicity of the process.\n\nTraditional estate agents often market homes at optimistic prices, which can result in long periods on the market, repeated price reductions, and ongoing costs. Estate agent fees are commonly around 3% plus VAT, which on a £300,000 property can equate to £10,000–£15,000, before factoring in time, uncertainty, and other associated overheads.",
+      "We believe in clarity from the outset. Our offers are typically around 80% of current market value, reflecting the certainty, speed, and simplicity of the process.\n\nTraditional estate agents often price homes optimistically, which can lead to extended time on the market, reductions, and ongoing costs. Fees are commonly around 3% plus VAT — on a £300,000 property, this can amount to £10,000–£15,000, before accounting for time and other overheads.",
+    image: faqUndervalued,
   },
   {
     question: "The house needs repairs and clearing out. Can you help with that?",
     answer:
       "Yes. We can arrange for the buyer to handle repairs and clear-outs, so you don't need to manage works or organise contractors.",
+    image: faqRepairs,
   },
   {
     question: "The process sounds complicated. Will you simplify it for me?",
     answer:
       "Yes. We break everything down into calm, manageable steps and take care of the paperwork, so you always know what's happening.",
+    image: faqComplicated,
   },
   {
     question: "How quickly can things move if I need a faster timeline?",
     answer:
       "In most instances, we can complete within 7–28 days, depending on your circumstances and the property.",
+    image: faqTimeline,
   },
 ];
 
@@ -124,11 +134,11 @@ export default function Index() {
         </div>
 
         <div className="container relative z-10 py-20">
-          <div className="max-w-2xl animate-fade-in-up">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-primary-foreground leading-tight mb-6">
               Selling a property during a life transition doesn’t have to be stressful.
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8 max-w-xl">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8 max-w-2xl mx-auto">
               When life brings transitions through loss, divorce, or change,
               selling a home can feel overwhelming. We guide you through with
               compassion, handling the practical burdens so you can focus on
@@ -239,25 +249,37 @@ export default function Index() {
         <div className="container">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-serif text-primary mb-4">
-              Common Concerns, Gentle Guidance
+              Common Concerns
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Your questions, answered with compassion.
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-6 mb-12">
+          <div className="max-w-5xl mx-auto space-y-8 mb-12">
             {faqPreview.map((faq, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl p-6 shadow-soft border border-border"
+                className={`grid md:grid-cols-2 gap-8 items-center bg-card rounded-2xl p-6 md:p-8 shadow-soft border border-border ${
+                  index % 2 === 0 ? "" : "md:grid-flow-dense"
+                }`}
               >
-                <h3 className="font-serif text-lg text-primary mb-3">
-                  "{faq.question}"
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {faq.answer}
-                </p>
+                <div className={index % 2 === 0 ? "" : "md:col-start-2"}>
+                  <h3 className="font-serif text-xl text-primary mb-4">
+                    "{faq.question}"
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                    {faq.answer}
+                  </p>
+                </div>
+                <div className={index % 2 === 0 ? "" : "md:col-start-1"}>
+                  <img
+                    src={faq.image}
+                    alt={faq.question}
+                    className="w-full aspect-square object-cover rounded-xl"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -265,7 +287,7 @@ export default function Index() {
           <div className="text-center">
             <Link to="/faq">
               <Button variant="outline" size="lg">
-                Read More Gentle Guidance
+                Read More Questions
                 <ChevronRight className="ml-1" />
               </Button>
             </Link>
