@@ -11,6 +11,7 @@ import SellProperty from "./pages/SellProperty";
 import HowItWorks from "./pages/HowItWorks";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 import NotFound from "./pages/NotFound";
 
@@ -58,6 +59,7 @@ const App = () => {
                 <Route path="/how-it-works" element={<HowItWorks />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/about" element={<About />} />
                 
                 <Route path="*" element={<NotFound />} />
               </Routes>

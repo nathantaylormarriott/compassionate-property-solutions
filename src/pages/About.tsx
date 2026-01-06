@@ -1,0 +1,286 @@
+import { Link } from "react-router-dom";
+import { Layout } from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, MessageCircle, Banknote, CheckCircle } from "lucide-react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import residentialDistrict from "@/assets/residential-district.webp";
+
+const processSteps = [
+  {
+    icon: MessageCircle,
+    title: "A Private Conversation",
+    description:
+      "A confidential, no-obligation chat about your situation and timeline.",
+  },
+  {
+    icon: Banknote,
+    title: "A Fair Cash Offer",
+    description:
+      "After due diligence (including a valuation and viewing), we provide a clear, transparent cash offer. No agent fees or hidden costs.",
+  },
+  {
+    icon: CheckCircle,
+    title: "A Streamlined Completion",
+    description:
+      "We handle everything. The property is sold 'as-is' – no repairs or staging. Completion can often be in 7 days to 8 weeks, depending on your circumstances.",
+  },
+];
+
+const comparisonData = [
+  {
+    category: "Type of Sale",
+    us: "Private, off-market sale.",
+    agents: "Public, open-market sale.",
+  },
+  {
+    category: "Buyer",
+    us: "Pre-qualified cash buyers or institutional funds.",
+    agents: "Any buyer (often requiring a mortgage).",
+  },
+  {
+    category: "Speed",
+    us: "Fast. Completion in as little as 7 days, typically within a few weeks.",
+    agents: "Slow. Takes 3-6 months on average, dependent on a chain.",
+  },
+  {
+    category: "Process",
+    us: "Simple, direct 3-step process. No public viewings.",
+    agents:
+      "Complex: requires marketing, viewings, negotiations, and chain management.",
+  },
+  {
+    category: "Fees & Costs",
+    us: "No fees. You receive the agreed cash sum. No agent commission.",
+    agents:
+      "Agent commission (typically 1-3% + VAT). Seller often pays for EPC, staging, or repairs.",
+  },
+  {
+    category: "Property Condition",
+    us: "Sold 'as-is'. No need for cleaning, repairs, or decorating.",
+    agents:
+      "Often requires investment to make it 'market-ready' to attract buyers.",
+  },
+  {
+    category: "Certainty",
+    us: "High. Cash sale, no chain, and guaranteed completion once agreed.",
+    agents:
+      "Low. Risk of buyer's mortgage falling through or a chain collapsing.",
+  },
+  {
+    category: "Best For",
+    us: "Urgent sales, probate, divorce, avoiding stress, or needing a quick, guaranteed exit.",
+    agents:
+      "Maximising price in a stable market, with time for viewings and negotiation.",
+  },
+  {
+    category: "Control & Privacy",
+    us: "High privacy. Discreet process with minimal public exposure.",
+    agents:
+      "Low privacy. Property is publicly advertised with frequent viewings.",
+  },
+];
+
+export default function About() {
+  return (
+    <Layout>
+      {/* Hero */}
+      <section className="bg-primary py-16 md:py-24 -mt-20 pt-28 md:pt-32">
+        <div className="container">
+          <div className="max-w-3xl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-foreground mb-6 animate-fade-in-up">
+              About Us
+            </h1>
+            <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl">
+              A New Approach for Life's Transitions
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Purpose */}
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6">
+              Our Purpose
+            </h2>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              When facing a bereavement or divorce, you don't need a lengthy,
+              public property sale. We offer a private, compassionate
+              alternative. We connect homeowners in transition with prepared
+              cash buyers. Our process avoids public viewings and market
+              uncertainty, offering a respectful path to closure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder's Vision with background image */}
+      <section className="relative py-16 md:py-24 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-[0.08]"
+          style={{ backgroundImage: `url(${residentialDistrict})` }}
+          aria-hidden="true"
+        />
+        <div className="container relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6">
+              Our Founder's Vision
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              The Next Chapter Homes started after seeing loved ones endure
+              long, stressful sales during difficult times.
+            </p>
+            <blockquote className="border-l-4 border-accent pl-6 py-2 text-left italic text-foreground/90 bg-card/50 rounded-r-lg">
+              "People needing to settle estates or finalise divorces were stuck
+              for months, paying bills on an empty property. They needed a
+              better way – one that prioritised resolution and peace."
+            </blockquote>
+            <p className="text-muted-foreground leading-relaxed mt-6">
+              That vision drives us: making the practical side of moving on
+              simpler and swifter.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Steps */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {processSteps.map((step, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                  <step.icon className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-serif text-lg text-primary mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Commitment */}
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6">
+              Our Commitment
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              We have built trust through two principles:
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card border border-border rounded-xl p-6 shadow-soft">
+                <h3 className="font-serif text-lg text-primary mb-2">
+                  Compassionate Efficiency
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  We ease the burden during tough transitions.
+                </p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-6 shadow-soft">
+                <h3 className="font-serif text-lg text-primary mb-2">
+                  Utmost Honesty
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  We act with fairness and transparency, encouraging you to seek
+                  independent advice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-serif text-primary mb-8 text-center">
+              How We Compare
+            </h2>
+            <p className="text-muted-foreground text-center mb-8">
+              The Next Chapter Homes vs Estate Agents
+            </p>
+            <div className="bg-card border border-border rounded-xl shadow-soft overflow-hidden">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-primary/5">
+                    <TableHead className="font-serif text-primary w-1/4">
+                      Criteria
+                    </TableHead>
+                    <TableHead className="font-serif text-accent w-[37.5%]">
+                      The Next Chapter Homes
+                    </TableHead>
+                    <TableHead className="font-serif text-muted-foreground w-[37.5%]">
+                      Estate Agents
+                    </TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {comparisonData.map((row, index) => (
+                    <TableRow
+                      key={index}
+                      className={index % 2 === 0 ? "bg-background" : "bg-muted/20"}
+                    >
+                      <TableCell className="font-medium text-foreground">
+                        {row.category}
+                      </TableCell>
+                      <TableCell className="text-foreground">
+                        <span className="font-medium text-accent">
+                          {row.us.split(".")[0]}.
+                        </span>
+                        {row.us.includes(".") && row.us.split(".").slice(1).join(".")}
+                      </TableCell>
+                      <TableCell className="text-muted-foreground">
+                        {row.agents}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-serif text-primary mb-4">
+              Ready to Start Your Next Chapter?
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              We're here to listen and help you find the right path forward.
+              There's no pressure, no obligation—just a compassionate
+              conversation.
+            </p>
+            <Link to="/contact">
+              <Button size="lg">
+                Begin a Conversation
+                <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
