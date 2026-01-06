@@ -182,7 +182,7 @@ export default function About() {
       {/* Our Commitment with Process Steps */}
       <section className="py-16 md:py-24">
         <div className="container">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-4">
                 Our Commitment
@@ -192,41 +192,21 @@ export default function About() {
               </p>
             </div>
             
-            {/* Commitment Principles */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {commitmentPrinciples.map((principle, index) => (
+            {/* All Tiles in One Grid */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+              {[...commitmentPrinciples, ...processSteps].map((item, index) => (
                 <div
                   key={index}
                   className="bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-lg transition-shadow"
                 >
                   <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                    <principle.icon className="w-6 h-6 text-accent" />
+                    <item.icon className="w-6 h-6 text-accent" />
                   </div>
                   <h3 className="font-serif text-xl text-primary mb-3">
-                    {principle.title}
+                    {item.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {principle.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Process Steps */}
-            <div className="grid md:grid-cols-3 gap-6">
-              {processSteps.map((step, index) => (
-                <div
-                  key={index}
-                  className="bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-lg transition-shadow"
-                >
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                    <step.icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="font-serif text-xl text-primary mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {step.description}
+                    {item.description}
                   </p>
                 </div>
               ))}
