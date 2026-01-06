@@ -23,7 +23,7 @@ const App = () => {
 
   const handleUnlock = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (password.trim().toLowerCase() !== "opportunity") {
+    if (password.trim().toLowerCase() !== "demo") {
       setError("Incorrect password. Please try again.");
       return;
     }
@@ -42,7 +42,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="relative min-h-screen">
+          <div className={`relative min-h-screen ${!isUnlocked ? "overflow-hidden h-screen" : ""}`}>
             <div
               className={`transition-[filter,opacity] duration-700 ease-out ${
                 !isUnlocked && !isUnlocking
