@@ -21,7 +21,7 @@ const steps = [
     number: "2",
     title: "Your Personalised Path",
     description:
-      "We explain every option clearly—from a traditional sale to a discreet, guided sale—and help you choose what brings the most peace and meets your practical needs. You are always in control.",
+      "We explain every option clearly from a traditional sale to a discreet, guided sale and provide clarity where you need it most. You are always in control.",
     details: [
       "Clear explanation of all options",
       "No confusing jargon or pressure",
@@ -45,7 +45,7 @@ const steps = [
     number: "4",
     title: "We Carry the Burden",
     description:
-      "Once you decide to proceed, our dedicated team handles everything: from coordinating with your solicitors or ours and navigating paperwork to managing the home's condition. We are your single point of contact throughout.",
+      "Once you decide, we take care of the process around the sale, helping navigate paperwork, and ensuring you're supported and informed at every stage. We are your single point of contact throughout.",
     details: [
       "Coordinate with your solicitors or ours",
       "Regular progress updates",
@@ -158,7 +158,7 @@ export default function HowItWorks() {
               When time is of the essence—whether due to probate deadlines, divorce settlements, or simply the need for closure—the traditional property market moves too slowly. Public viewings, buyer financing delays, and lengthy chains can add months of uncertainty.
             </p>
 
-            <div className="bg-white/10 rounded-xl p-6 md:p-8 border border-white/20">
+            <div className="bg-primary/60 rounded-xl p-6 md:p-8">
               <h3 className="text-xl font-serif text-primary-foreground mb-4">
                 Our Realistic Timeline:
               </h3>

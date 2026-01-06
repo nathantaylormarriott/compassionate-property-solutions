@@ -9,7 +9,6 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/faq", label: "FAQ" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -40,12 +39,12 @@ export function Header() {
               <Link key={link.href} to={link.href}>
                 <Button
                   variant="nav"
-                  size="sm"
-                  className={
+                  size="default"
+                  className={`text-base ${
                     location.pathname === link.href
                       ? "text-accent"
                       : ""
-                  }
+                  }`}
                 >
                   {link.label}
                 </Button>
@@ -56,7 +55,7 @@ export function Header() {
           {/* CTA button - right */}
           <div className="hidden lg:block ml-auto">
             <Link to="/contact">
-              <Button size="sm">Begin a Conversation</Button>
+              <Button size="default" className="text-base px-5">Begin a Conversation</Button>
             </Link>
           </div>
 
