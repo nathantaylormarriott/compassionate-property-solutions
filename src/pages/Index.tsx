@@ -41,7 +41,7 @@ const faqPreview = [
   {
     question: "I'm worried about accepting an undervalued offer. How do you protect me?",
     answer:
-      "We share clear market context, explain each offer transparently, and support you in making the decision that feels right without pressure.",
+      "We believe in clarity from the outset. Our offers are typically around 80% of current market value, reflecting the certainty, speed, and simplicity of the process.\n\nTraditional estate agents often market homes at optimistic prices, which can result in long periods on the market, repeated price reductions, and ongoing costs. Estate agent fees are commonly around 3% plus VAT, which on a £300,000 property can equate to £10,000–£15,000, before factoring in time, uncertainty, and other associated overheads.",
   },
   {
     question: "The house needs repairs and clearing out. Can you help with that?",
