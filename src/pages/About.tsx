@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle, Banknote, CheckCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Banknote, CheckCircle, Heart, Shield } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import residentialDistrict from "@/assets/residential-district.webp";
+import countrysideImage from "@/assets/about-us-countryside.webp";
 
 const processSteps = [
   {
@@ -30,6 +31,20 @@ const processSteps = [
     title: "A Streamlined Completion",
     description:
       "We handle everything. The property is sold 'as-is' – no repairs or staging. Completion can often be in 7 days to 8 weeks, depending on your circumstances.",
+  },
+];
+
+const commitmentPrinciples = [
+  {
+    icon: Heart,
+    title: "Compassionate Efficiency",
+    description: "We ease the burden during tough transitions.",
+  },
+  {
+    icon: Shield,
+    title: "Utmost Honesty",
+    description:
+      "We act with fairness and transparency, encouraging you to seek independent advice.",
   },
 ];
 
@@ -134,86 +149,94 @@ export default function About() {
       {/* Founder's Vision */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-6">
-              Our Founder's Vision
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              The Next Chapter Homes started after seeing loved ones endure
-              long, stressful sales during difficult times.
-            </p>
-            <blockquote className="border-l-4 border-accent pl-6 py-2 text-left italic text-foreground/90 bg-card/50 rounded-r-lg">
-              "People needing to settle estates or finalise divorces were stuck
-              for months, paying bills on an empty property. They needed a
-              better way – one that prioritised resolution and peace."
-            </blockquote>
-            <p className="text-muted-foreground leading-relaxed mt-6">
-              That vision drives us: making the practical side of moving on
-              simpler and swifter.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="rounded-xl overflow-hidden shadow-lg order-2 lg:order-1">
+              <img
+                src={countrysideImage}
+                alt="Peaceful countryside path"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="text-center lg:text-left order-1 lg:order-2">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-6">
+                Our Founder's Vision
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                The Next Chapter Homes started after seeing loved ones endure
+                long, stressful sales during difficult times.
+              </p>
+              <blockquote className="text-xl md:text-2xl font-serif italic text-primary leading-relaxed">
+                "People needing to settle estates or finalise divorces were stuck
+                for months, paying bills on an empty property. They needed a
+                better way – one that prioritised resolution and peace."
+              </blockquote>
+              <p className="text-muted-foreground leading-relaxed mt-8">
+                That vision drives us: making the practical side of moving on
+                simpler and swifter.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Process Steps */}
+      {/* Our Commitment with Process Steps */}
       <section className="py-16 md:py-24">
         <div className="container">
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {processSteps.map((step, index) => (
-              <div
-                key={index}
-                className="bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                  <step.icon className="w-6 h-6 text-accent" />
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-4">
+                Our Commitment
+              </h2>
+              <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                We have built trust through two principles:
+              </p>
+            </div>
+            
+            {/* Commitment Principles */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {commitmentPrinciples.map((principle, index) => (
+                <div
+                  key={index}
+                  className="bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-lg transition-shadow"
+                >
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                    <principle.icon className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="font-serif text-xl text-primary mb-3">
+                    {principle.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {principle.description}
+                  </p>
                 </div>
-                <h3 className="font-serif text-xl text-primary mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              ))}
+            </div>
 
-      {/* Our Commitment */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-6">
-              Our Commitment
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              We have built trust through two principles:
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-card border border-border rounded-xl p-6 shadow-soft">
-                <h3 className="font-serif text-xl text-primary mb-2">
-                  Compassionate Efficiency
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We ease the burden during tough transitions.
-                </p>
-              </div>
-              <div className="bg-card border border-border rounded-xl p-6 shadow-soft">
-                <h3 className="font-serif text-xl text-primary mb-2">
-                  Utmost Honesty
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  We act with fairness and transparency, encouraging you to seek
-                  independent advice.
-                </p>
-              </div>
+            {/* Process Steps */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {processSteps.map((step, index) => (
+                <div
+                  key={index}
+                  className="bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-lg transition-shadow"
+                >
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                    <step.icon className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="font-serif text-xl text-primary mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary mb-8 text-center">
@@ -226,13 +249,13 @@ export default function About() {
               <Table>
                 <TableHeader>
                   <TableRow className="bg-primary/5">
-                    <TableHead className="font-serif text-primary text-lg w-1/4 border-r border-border">
+                    <TableHead className="font-serif font-semibold text-primary text-lg md:text-xl w-1/4 border-r border-border">
                       Criteria
                     </TableHead>
-                    <TableHead className="font-serif text-accent text-lg w-[37.5%] border-r border-border">
+                    <TableHead className="font-serif font-semibold text-primary text-lg md:text-xl w-[37.5%] border-r border-border">
                       The Next Chapter Homes
                     </TableHead>
-                    <TableHead className="font-serif text-muted-foreground text-lg w-[37.5%]">
+                    <TableHead className="font-serif font-semibold text-primary text-lg md:text-xl w-[37.5%]">
                       Estate Agents
                     </TableHead>
                   </TableRow>
