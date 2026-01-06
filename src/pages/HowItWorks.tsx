@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Ear, Compass, HandHeart, CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import pineForestBg from "@/assets/pineforest.webp";
 
 const steps = [
   {
-    number: "01",
+    number: "1",
     title: "A Listening Ear First",
     description:
       "We start with a private, no-obligation conversation to truly understand your unique situation, timeline, and needs. Whether you're dealing with bereavement, divorce, or another life change, we listen first. There is no rush, no script. This is your journey.",
-    icon: Ear,
     details: [
       "No pressure, no obligation",
       "Understand your timeline and needs",
@@ -18,11 +18,10 @@ const steps = [
     ],
   },
   {
-    number: "02",
+    number: "2",
     title: "Your Personalised Path",
     description:
       "We explain every option clearly—from a traditional sale to a discreet, guided sale—and help you choose what brings the most peace and meets your practical needs. You are always in control.",
-    icon: Compass,
     details: [
       "Clear explanation of all options",
       "No confusing jargon or pressure",
@@ -31,11 +30,10 @@ const steps = [
     ],
   },
   {
-    number: "03",
+    number: "3",
     title: "Private Introductions",
     description:
       "Using our network of vetted buyers, we identify those whose criteria match your property. We never share your details publicly or list on any portals. Your privacy is sacred.",
-    icon: CheckCircle2,
     details: [
       "Match with suitable private buyers",
       "No public marketing or listings",
@@ -44,11 +42,10 @@ const steps = [
     ],
   },
   {
-    number: "04",
+    number: "4",
     title: "We Carry the Burden",
     description:
       "Once you decide to proceed, our dedicated team handles everything: from coordinating with your solicitors or ours and navigating paperwork to managing the home's condition. We are your single point of contact throughout.",
-    icon: HandHeart,
     details: [
       "Coordinate with your solicitors or ours",
       "Regular progress updates",
@@ -91,7 +88,7 @@ export default function HowItWorks() {
                 <div className="flex gap-8 mb-16">
                   {/* Step number */}
                   <div className="hidden md:flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-serif font-bold text-lg">
+                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-sans font-bold text-xl">
                       {step.number}
                     </div>
                   </div>
@@ -99,12 +96,9 @@ export default function HowItWorks() {
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="md:hidden text-2xl font-serif font-bold text-accent">
+                      <span className="md:hidden text-2xl font-sans font-bold text-accent">
                         {step.number}
                       </span>
-                      <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                        <step.icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
-                      </div>
                       <h2 className="text-2xl font-serif text-primary">
                         {step.title}
                       </h2>
@@ -134,6 +128,47 @@ export default function HowItWorks() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Swift Sale Section */}
+      <section className="relative py-16 md:py-24">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${pineForestBg})` }}
+        >
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary-foreground mb-4">
+              For Those Needing a Swift Sale
+            </h2>
+            <p className="text-xl md:text-2xl font-serif text-primary-foreground/90 mb-8">
+              A Direct Path to Completion, Not Just a Viewing
+            </p>
+
+            <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6">
+              We exclusively connect you with verified cash buyers.
+            </p>
+
+            <p className="text-primary-foreground/80 leading-relaxed mb-10">
+              When time is of the essence—whether due to probate deadlines, divorce settlements, or simply the need for closure—the traditional property market moves too slowly. Public viewings, buyer financing delays, and lengthy chains can add months of uncertainty.
+            </p>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/20">
+              <h3 className="text-xl font-serif text-primary-foreground mb-4">
+                Our Realistic Timeline:
+              </h3>
+              <p className="text-primary-foreground/90 leading-relaxed mb-6">
+                Our goal, and our consistent track record, is to facilitate a completion between 7 days and 8 weeks from your accepted offer. We coordinate all legal and financial processes efficiently to make this possible.
+              </p>
+              <p className="text-primary-foreground/70 text-sm leading-relaxed italic">
+                Please note: While this is our clear aim, it is not a guaranteed promise. The exact timeline can be influenced by legal complexities inherent to your situation, such as probate validation or transfer of equity. We will, however, manage every aspect to proceed as swiftly as the circumstances allow, keeping you clearly informed at each stage.
+              </p>
+            </div>
           </div>
         </div>
       </section>

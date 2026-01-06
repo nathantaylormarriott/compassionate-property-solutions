@@ -17,10 +17,11 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/70 backdrop-blur-xl border border-white/20 shadow-lg">
+    <header className="sticky top-0 z-50 bg-card/70 backdrop-blur-xl border border-white/20 shadow-lg">
       <div className="container">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2">
+        <div className="flex items-center h-16 md:h-20">
+          {/* Logo - left */}
+          <Link to="/" className="flex items-center gap-2 flex-shrink-0">
             <img
               src={keysLogo}
               alt=""
@@ -32,8 +33,8 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          {/* Desktop Navigation - centered */}
+          <nav className="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => (
               <Link key={link.href} to={link.href}>
                 <Button
@@ -51,7 +52,8 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:block">
+          {/* CTA button - right */}
+          <div className="hidden lg:block ml-auto">
             <Link to="/contact">
               <Button size="sm">Begin a Conversation</Button>
             </Link>
