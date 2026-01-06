@@ -85,7 +85,7 @@ export default function FAQ() {
       {/* FAQ List */}
       <section className="relative py-16 md:py-24 overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.12]"
+          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-[0.12]"
           style={{ backgroundImage: `url(${faqBackground})` }}
           aria-hidden="true"
         />
