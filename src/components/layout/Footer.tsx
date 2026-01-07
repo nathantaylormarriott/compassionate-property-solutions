@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const footerLinks = {
   services: [
-    { href: "/sell", label: "Sell a Property" },
+    { href: "/about", label: "About" },
     { href: "/how-it-works", label: "How It Works" },
   ],
   support: [
     { href: "/faq", label: "FAQ" },
-    { href: "/contact", label: "Contact Us" },
+    { href: "/contact", label: "Begin a Conversation" },
   ],
 };
 

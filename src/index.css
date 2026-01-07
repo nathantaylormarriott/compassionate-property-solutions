@@ -6,6 +6,7 @@
 
 @layer base {
   :root {
+    color-scheme: light only;
     /* Brand Colors - HSL converted from provided hex */
     --primary-navy: 211 52% 24%;
     --accent-sage: 153 16% 49%;
@@ -52,25 +53,6 @@
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .dark {
-    --background: 211 52% 12%;
-    --foreground: 36 33% 96%;
-    --card: 211 52% 16%;
-    --card-foreground: 36 33% 96%;
-    --popover: 211 52% 16%;
-    --popover-foreground: 36 33% 96%;
-    --primary: 36 33% 96%;
-    --primary-foreground: 211 52% 24%;
-    --secondary: 28 18% 30%;
-    --secondary-foreground: 36 33% 96%;
-    --muted: 211 40% 20%;
-    --muted-foreground: 218 17% 65%;
-    --accent: 153 16% 49%;
-    --accent-foreground: 0 0% 100%;
-    --border: 211 40% 25%;
-    --input: 211 40% 25%;
-    --ring: 153 16% 49%;
-  }
 }
 
 @layer base {

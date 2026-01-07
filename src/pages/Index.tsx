@@ -8,7 +8,7 @@ import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { Ear, Compass, HandHeart, ArrowRight, ChevronRight } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
-import propertyStaircase from "@/assets/This Is More Than Just a Property Sale tile.jpg";
+import propertyStaircase from "@/assets/property-sale-tile.jpg";
 import patienceBackground from "@/assets/section background.jpg";
 import faqNotReady from "@/assets/faq-not-ready.webp";
 import faqUndervalued from "@/assets/faq-undervalued.webp";
