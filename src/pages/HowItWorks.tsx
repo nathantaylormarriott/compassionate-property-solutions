@@ -183,7 +183,7 @@ export default function HowItWorks() {
               just an opportunity to explore your options with someone who truly
               listens.
             </p>
-            <Link to="/contact">
+            <Link to="/#contact-form">
               <Button size="lg">
                 Begin a Conversation
                 <ArrowRight className="ml-2" />

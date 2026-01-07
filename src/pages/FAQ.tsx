@@ -122,7 +122,7 @@ export default function FAQ() {
               We're happy to answer any questions you may have. There's no
               pressure, no obligation—just a compassionate conversation.
             </p>
-            <Link to="/contact">
+            <Link to="/#contact-form">
               <Button size="lg">
                 Begin a Conversation
                 <ArrowRight className="ml-2" />

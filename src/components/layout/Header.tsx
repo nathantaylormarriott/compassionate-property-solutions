@@ -56,7 +56,7 @@ export function Header() {
             {/* Mobile: Logo or CTA based on scroll/page */}
             <div className="lg:hidden">
               {showMobileCTA ? (
-                <Link to="/contact" className="animate-fade-in">
+                <Link to="/#contact-form" className="animate-fade-in">
                   <Button size="sm" className="text-sm">
                     Begin a Conversation
                   </Button>
@@ -98,7 +98,7 @@ export function Header() {
 
           {/* Desktop CTA button - right */}
           <div className="hidden lg:block">
-            <Link to="/contact">
+            <Link to="/#contact-form">
               <Button size="default" className="text-base px-5">Begin a Conversation</Button>
             </Link>
           </div>
@@ -135,7 +135,7 @@ export function Header() {
                   </Button>
                 </Link>
               ))}
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
+              <Link to="/#contact-form" onClick={() => setIsOpen(false)}>
                 <Button className="w-full mt-2">Begin a Conversation</Button>
               </Link>
             </div>

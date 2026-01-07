@@ -276,7 +276,7 @@ export default function About() {
               There's no pressure, no obligation—just a compassionate
               conversation.
             </p>
-            <Link to="/contact">
+            <Link to="/#contact-form">
               <Button size="lg">
                 Begin a Conversation
                 <ArrowRight className="ml-2" />
