@@ -7,7 +7,7 @@ const footerLinks = {
   ],
   support: [
     { href: "/faq", label: "FAQ" },
-    { href: "/contact", label: "Begin a Conversation" },
+    { href: "/#contact-form", label: "Begin a Conversation" },
   ],
 };
 

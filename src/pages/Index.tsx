@@ -47,7 +47,7 @@ const faqPreview = [
   {
     question: "I'm worried about accepting an undervalued offer. How do you protect me?",
     answer:
-      "We believe in clarity from the outset. Our offers are typically around 80% of current market value, reflecting the certainty, speed, and simplicity of the process.\n\nTraditional estate agents often price homes optimistically, which can lead to extended time on the market, reductions, and ongoing costs. Fees are commonly around 3% plus VAT — on a £300,000 property, this can amount to £10,000–£15,000, before accounting for time and other overheads.",
+      "We share clear market context, explain each offer in plain terms, and help you weigh what matters most. You stay in control at every stage.",
     image: faqUndervalued,
   },
   {
@@ -57,16 +57,10 @@ const faqPreview = [
     image: faqRepairs,
   },
   {
-    question: "The process sounds complicated. Will you simplify it for me?",
+    question: "The process feels complicated. Will you simplify it for me?",
     answer:
-      "Yes. We break everything down into calm, manageable steps and take care of the paperwork, so you always know what's happening.",
+      "Yes. We break everything down into calm, manageable steps and handle the paperwork, so you always know what's happening.",
     image: faqComplicated,
-  },
-  {
-    question: "How quickly can things move if I need a faster timeline?",
-    answer:
-      "In most instances, we can complete within 7 days to 8 weeks, depending on your circumstances and the property.",
-    image: faqTimeline,
   },
 ];
 
@@ -83,6 +77,7 @@ export default function Index() {
     name: "",
     email: "",
     phone: "",
+    houseNumber: "",
     postcode: "",
     situation: "",
     timeframe: "",
@@ -110,6 +105,7 @@ export default function Index() {
       name: "",
       email: "",
       phone: "",
+      houseNumber: "",
       postcode: "",
       situation: "",
       timeframe: "",
@@ -146,12 +142,12 @@ export default function Index() {
             </p>
 
             <div className="mb-4">
-              <Link to="/contact">
-                <Button variant="hero" size="lg">
-                  Begin a Conversation
-                  <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
+            <a href="#contact-form">
+              <Button variant="hero" size="lg">
+                Begin a Conversation
+                <ArrowRight className="ml-2" />
+              </Button>
+            </a>
             </div>
 
             <p className="text-primary-foreground/60 text-sm italic">
@@ -301,7 +297,7 @@ export default function Index() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 md:py-28 bg-primary">
+      <section id="contact-form" className="py-20 md:py-28 bg-primary">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -361,6 +357,17 @@ export default function Index() {
                       />
                     </div>
                     <div className="space-y-2">
+                      <Label htmlFor="houseNumber">House name/number *</Label>
+                      <Input
+                        id="houseNumber"
+                        name="houseNumber"
+                        value={formData.houseNumber}
+                        onChange={handleChange}
+                        required
+                        placeholder="e.g. 42 or Rosewood Cottage"
+                      />
+                    </div>
+                    <div className="space-y-2">
                       <Label htmlFor="postcode">Property postcode *</Label>
                       <Input
                         id="postcode"
@@ -411,7 +418,7 @@ export default function Index() {
                       name="notes"
                       value={formData.notes}
                       onChange={handleChange}
-                      placeholder="Share whatever feels comfortable. There are no wrong answers..."
+                      placeholder="Share whatever feels comfortable."
                       rows={4}
                     />
                   </div>
