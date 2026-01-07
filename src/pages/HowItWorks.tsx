@@ -158,17 +158,15 @@ export default function HowItWorks() {
               When time is of the essence—whether due to probate deadlines, divorce settlements, or simply the need for closure—the traditional property market moves too slowly. Public viewings, buyer financing delays, and lengthy chains can add months of uncertainty.
             </p>
 
-            <div className="bg-primary/60 rounded-xl p-6 md:p-8">
-              <h3 className="text-xl font-serif text-primary-foreground mb-4">
-                Our Realistic Timeline:
-              </h3>
-              <p className="text-primary-foreground/90 leading-relaxed mb-6">
-                Our goal, and our consistent track record, is to facilitate a completion between 7 days and 8 weeks from your accepted offer. We coordinate all legal and financial processes efficiently to make this possible.
-              </p>
-              <p className="text-primary-foreground/70 text-sm leading-relaxed italic">
-                Please note: While this is our clear aim, it is not a guaranteed promise. The exact timeline can be influenced by legal complexities inherent to your situation, such as probate validation or transfer of equity. We will, however, manage every aspect to proceed as swiftly as the circumstances allow, keeping you clearly informed at each stage.
-              </p>
-            </div>
+            <h3 className="text-xl font-serif text-primary-foreground mb-4">
+              Our Realistic Timeline:
+            </h3>
+            <p className="text-primary-foreground/90 leading-relaxed mb-6">
+              Our goal, and our consistent track record, is to facilitate a completion between 7 days and 8 weeks from your accepted offer. We coordinate all legal and financial processes efficiently to make this possible.
+            </p>
+            <p className="text-primary-foreground/70 text-sm leading-relaxed italic">
+              Please note: While this is our clear aim, it is not a guaranteed promise. The exact timeline can be influenced by legal complexities inherent to your situation, such as probate validation or transfer of equity. We will, however, manage every aspect to proceed as swiftly as the circumstances allow, keeping you clearly informed at each stage.
+            </p>
           </div>
         </div>
       </section>

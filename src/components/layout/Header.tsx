@@ -17,6 +17,10 @@ export function Header() {
   const [scrolledPastHero, setScrolledPastHero] = useState(false);
   const location = useLocation();
 
+  // On non-home pages, always show the CTA button on mobile
+  const isHomePage = location.pathname === "/";
+  const showMobileCTA = !isHomePage || scrolledPastHero;
+
   useEffect(() => {
     const handleScroll = () => {
       // Consider "past hero" when scrolled more than 80vh
@@ -49,9 +53,9 @@ export function Header() {
               </span>
             </Link>
 
-            {/* Mobile: Logo or CTA based on scroll */}
+            {/* Mobile: Logo or CTA based on scroll/page */}
             <div className="lg:hidden">
-              {scrolledPastHero ? (
+              {showMobileCTA ? (
                 <Link to="/contact" className="animate-fade-in">
                   <Button size="sm" className="text-sm">
                     Begin a Conversation
