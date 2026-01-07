@@ -15,7 +15,6 @@ import faqUndervalued from "@/assets/faq-undervalued.webp";
 import faqRepairs from "@/assets/faq-repairs.webp";
 import faqComplicated from "@/assets/faq-complicated.webp";
 import faqTimeline from "@/assets/faq-timeline.webp";
-import faqBackground from "@/assets/faq-background.webp";
 const processSteps = [
   {
     icon: Ear,
@@ -241,13 +240,8 @@ export default function Index() {
       </section>
 
       {/* Section 4: FAQ Preview */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.06]"
-          style={{ backgroundImage: `url(${faqBackground})` }}
-          aria-hidden="true"
-        />
-        <div className="container relative z-10">
+      <section className="py-20 md:py-28">
+        <div className="container">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-serif text-primary mb-4">
               Common Concerns
