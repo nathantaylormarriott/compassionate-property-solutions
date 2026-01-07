@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -14,24 +14,64 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolledPastHero, setScrolledPastHero] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Consider "past hero" when scrolled more than 80vh
+      const heroThreshold = window.innerHeight * 0.8;
+      setScrolledPastHero(window.scrollY > heroThreshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-card shadow-lg">
       <div className="container">
-        <div className="flex items-center h-16 md:h-20">
-          {/* Logo - left */}
-          <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-            <img
-              src={keysLogo}
-              alt=""
-              className="h-8 w-8 rounded-full object-contain"
-              aria-hidden="true"
-            />
-            <span className="font-serif text-xl md:text-2xl font-bold text-primary">
-              The Next Chapter Homes
-            </span>
-          </Link>
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo - left (transforms to CTA on mobile when scrolled) */}
+          <div className="flex-shrink-0">
+            {/* Desktop: Always show logo */}
+            <Link to="/" className="hidden lg:flex items-center gap-2">
+              <img
+                src={keysLogo}
+                alt=""
+                className="h-8 w-8 rounded-full object-contain"
+                aria-hidden="true"
+              />
+              <span className="font-serif text-xl md:text-2xl font-bold text-primary">
+                The Next Chapter Homes
+              </span>
+            </Link>
+
+            {/* Mobile: Logo or CTA based on scroll */}
+            <div className="lg:hidden">
+              {scrolledPastHero ? (
+                <Link to="/contact" className="animate-fade-in">
+                  <Button size="sm" className="text-sm">
+                    Begin a Conversation
+                  </Button>
+                </Link>
+              ) : (
+                <Link to="/" className="flex items-center gap-2">
+                  <img
+                    src={keysLogo}
+                    alt=""
+                    className="h-8 w-8 rounded-full object-contain"
+                    aria-hidden="true"
+                  />
+                  <span className="font-serif text-xl font-bold text-primary">
+                    The Next Chapter Homes
+                  </span>
+                </Link>
+              )}
+            </div>
+          </div>
 
           {/* Desktop Navigation - centered */}
           <nav className="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
@@ -52,16 +92,16 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA button - right */}
-          <div className="hidden lg:block ml-auto">
+          {/* Desktop CTA button - right */}
+          <div className="hidden lg:block">
             <Link to="/contact">
               <Button size="default" className="text-base px-5">Begin a Conversation</Button>
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - always on the right */}
           <button
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground ml-auto"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
